@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class Mammel{
+public:
+    void class1(){
+        cout<<"I am a Mammel\n";
+    }
+};
+class MarineAnimals:public Mammel{
+public:
+    void class2(){
+        cout<<"I am a Marine animals\n";
+    }
+};
+class BlueWhale:public MarineAnimals{
+public:
+    void class3(){
+        cout<<"I am a marine animal and I belong to both the categories: Mammals as well as Marine Animals";
+    }
+};
+int main(){
+    BlueWhale a1;
+    a1.class1();
+    a1.class2();
+    a1.class3();
+    return 0;
+}
