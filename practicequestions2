@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+class Fruit{
+public:
+    int apple;
+    int mango;
+};
+class Apple:public Fruit{
+public:
+    void fruit1(){
+        cout<<"There are"<<" "<<apple<<"apples\n";
+    }
+};
+class Mango:public Apple{
+public:
+    void fruit2(){
+        cout<<"There are"<<" "<<mango<<"Mango\n";
+    }
+};
+int main(){
+    Mango s1;
+    cout<<"Enter Apple:";
+    cin>>s1.apple;
+    s1.fruit1();
+    cout<<"Enter Mango:";
+    cin>>s1.mango;
+    s1.fruit2();
+    int z=s1.apple+s1.mango;
+        cout<<"Total no fruits in a basket="<<z;
+    return 0;
+}
